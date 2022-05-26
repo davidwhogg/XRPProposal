@@ -27,6 +27,8 @@
 \linespread{1.03}
 
 %----- typeset certain kinds of words
+\newcommand{\tabref}[1]{\tablename~\ref{#1}}
+\newcommand{\figref}[1]{\figurename~\ref{#1}}
 \newcommand{\acronym}[1]{{\small{#1}}}
 \newcommand{\RV}{\acronym{RV}}
 \newcommand{\EPRV}{\acronym{EPRV}}
@@ -79,6 +81,7 @@
 \newcommand{\mnras}{Mon.\,Not.\,Roy.\,Ast.\,Soc.}
 \newcommand{\pasp}{Pubs.\,Astron.\,Soc.\,Pac.}
 \newcommand{\aap}{Astron.\,\&~Astrophys.}
+\newcommand{\aaps}{Astron.\,\&~Astrophys.\,Supp.}
 
 %----- fix bibtex shit
 \newcommand{\dodoi}[1]{}
@@ -94,14 +97,8 @@
 \newcommand{\eur}[1]{{#1}\,\textsc{eur}}
 
 %----- Ensmallen headers
-\renewcommand{\Large}{\normalsize}
-\renewcommand{\large}{\normalsize}
-\makeatletter
-\newcommand\nasasection{\@startsection {section}{1}{\z@}%
-                                   {-2.0ex \@plus -1.0ex \@minus -.2ex}% Change this line to modify space above heading
-                                   {1.0ex \@plus.2ex}% Change this line to modify space below heading
-                                   {\normalfont\bfseries}}
-\makeatother
+\renewcommand{\Large}{\large}
+%\renewcommand{\large}{\normalsize}
 
 %----- Tighten up paragraphs and lists
 \setlength{\bibsep}{0.5ex}
@@ -139,7 +136,7 @@
 %----- Special Hogg list for references
   \newcommand{\hogglist}{%
     \rightmargin=0in
-    \leftmargin=0.5\hoggindent
+    \leftmargin=0.75\hoggindent
     \topsep=0ex
     \partopsep=0pt
     \itemsep=0ex
